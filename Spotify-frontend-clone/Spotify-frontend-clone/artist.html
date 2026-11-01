@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Rain | Spotify-Web Player: Music for everyone</title>
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- CSS order matters: later files can override earlier ones -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/player.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="app">
+<aside class="sidebar">
+  <nav class="nav panel" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Home"><img src="assets/images/logo.png" alt="Logo"></a>
+    <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i><span class="label">Home</span></a>
+    <a class="nav-link" href="search.html"><i class="fa-solid fa-magnifying-glass"></i><span class="label">Search</span></a>
+  </nav>
+  <section class="library panel">
+    <div class="library-head">
+      <a class="nav-link" href="library.html"><img src="assets/icons/library_icon.png" alt=""><span class="label">Your Library</span></a>
+      <div class="icons">
+        <button class="icon-btn" aria-label="Create playlist"><i class="fa-solid fa-plus"></i></button>
+        <a class="icon-btn" href="library.html" aria-label="Open your library"><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="library-list">
+
+      <div class="box">
+        <p class="box-p1">Create your first playlist</p>
+        <p class="box-p2">It's easy, we'll help you</p>
+        <button class="badge">Create playlist</button>
+      </div>
+      <div class="box">
+        <p class="box-p1">Let's find some podcasts to follow</p>
+        <p class="box-p2">We'll keep you updated on new episodes</p>
+        <button class="badge">Browse podcasts</button>
+      </div>
+    </div>
+  </section>
+</aside>
+      <main class="main-content" style="--glow:#3b2a8a">
+<header class="topbar">
+  <div class="topbar-nav">
+    <a class="nav-circle" href="index.html" aria-label="Back to Home"><img src="assets/icons/backward_icon.png" alt=""></a>
+    <a class="nav-circle hide-md" href="#" aria-label="Forward"><img src="assets/icons/forward_icon.png" alt=""></a>
+  </div>
+  
+  <div class="topbar-actions">
+    <button class="badge hide-sm">Explore Premium</button>
+    <button class="badge dark-badge hide-md"><i class="fa-solid fa-circle-down"></i> Install App</button>
+    <a class="avatar" href="#" aria-label="Profile"><i class="fa-regular fa-user"></i></a>
+  </div>
+</header>
+        <div class="page">
+<section class="banner">
+  <p class="verified"><i class="fa-solid fa-circle-check"></i>Verified artist</p>
+  <h1>Nova Rain</h1>
+  <p class="meta" style="font-weight:600">1,248,903 monthly listeners</p>
+</section>
+<div class="actions">
+  <button class="btn-play" aria-label="Play"><i class="fa-solid fa-play"></i></button>
+  <button class="badge" style="margin:0;background:none;color:#fff;border:1px solid #7c7c7c">Follow</button>
+  <button class="action-icon" aria-label="More options"><i class="fa-solid fa-ellipsis"></i></button>
+</div>
+<section class="section" style="margin-top:8px">
+  <h2 style="margin-bottom:8px">Popular</h2>
+  <table class="tracks">
+        <thead><tr><th>#</th><th>Title</th><th class="col-album">Plays</th><th class="end"><i class="fa-regular fa-clock"></i></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="num"><span>1</span><i class="fa-solid fa-play"></i></td>
+            <td><div class="track-title"><div class="thumb-sm g2"><img src="assets/images/art/neon-rooftops.jpg" alt="Neon Rooftops cover art"></div><div><span>Neon Rooftops</span><small>Nova Rain</small></div></div></td>
+            
+            <td class="col-album">12,481,902</td>
+            <td class="end"><i class="fa-solid fa-heart like on"></i>3:12<i class="fa-solid fa-ellipsis more"></i></td>
+          </tr>
+          <tr>
+            <td class="num"><span>2</span><i class="fa-solid fa-play"></i></td>
+            <td><div class="track-title"><div class="thumb-sm g1"><img src="assets/images/art/afterglow.jpg" alt="Afterglow cover art"></div><div><span>Afterglow</span><small>Nova Rain</small></div></div></td>
+            
+            <td class="col-album">9,204,117</td>
+            <td class="end"><i class="fa-regular fa-heart like"></i>4:22<i class="fa-solid fa-ellipsis more"></i></td>
+          </tr>
+          <tr>
+            <td class="num"><span>3</span><i class="fa-solid fa-play"></i></td>
+            <td><div class="track-title"><div class="thumb-sm g3"><img src="assets/images/art/midnight-static.jpg" alt="Midnight Static cover art"></div><div><span>Midnight Static</span><small>Nova Rain</small></div></div></td>
+            
+            <td class="col-album">7,880,310</td>
+            <td class="end"><i class="fa-regular fa-heart like"></i>3:03<i class="fa-solid fa-ellipsis more"></i></td>
+          </tr>
+          <tr>
+            <td class="num"><span>4</span><i class="fa-solid fa-play"></i></td>
+            <td><div class="track-title"><div class="thumb-sm g10"><img src="assets/images/art/glass-skyline.jpg" alt="Glass Skyline cover art"></div><div><span>Glass Skyline</span><small>Nova Rain</small></div></div></td>
+            
+            <td class="col-album">5,112,764</td>
+            <td class="end"><i class="fa-regular fa-heart like"></i>3:48<i class="fa-solid fa-ellipsis more"></i></td>
+          </tr>
+          <tr>
+            <td class="num"><span>5</span><i class="fa-solid fa-play"></i></td>
+            <td><div class="track-title"><div class="thumb-sm g5"><img src="assets/images/art/slow-motion-summer.jpg" alt="Slow Motion Summer cover art"></div><div><span>Slow Motion Summer</span><small>Nova Rain</small></div></div></td>
+            
+            <td class="col-album">3,970,055</td>
+            <td class="end"><i class="fa-regular fa-heart like"></i>2:59<i class="fa-solid fa-ellipsis more"></i></td>
+          </tr>
+        </tbody>
+      </table>
+</section>
+<section class="cards section">
+  <div class="section-head"><h2>Albums and singles</h2><a class="show-all" href="#">Show all</a></div>
+  <div class="card-container">
+<a class="card" href="playlist.html">
+  <div class="cover g1"><img src="assets/images/art/afterglow.jpg" alt="Afterglow cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Afterglow</h3>
+  <p>2024 · Album</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g3"><img src="assets/images/art/midnight-static.jpg" alt="Midnight Static cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Midnight Static</h3>
+  <p>2023 · Album</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g2"><img src="assets/images/art/neon-rooftops.jpg" alt="Neon Rooftops cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Neon Rooftops</h3>
+  <p>2024 · Single</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g10"><img src="assets/images/art/glass-skyline.jpg" alt="Glass Skyline cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Glass Skyline</h3>
+  <p>2022 · Single</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g5"><img src="assets/images/art/slow-motion-summer.jpg" alt="Slow Motion Summer cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Slow Motion Summer</h3>
+  <p>2022 · EP</p>
+</a>
+  </div>
+</section>
+<section class="cards section">
+  <div class="section-head"><h2>Related artists</h2><a class="show-all" href="#">Show all</a></div>
+  <div class="card-container">
+<a class="card round" href="artist.html">
+  <div class="cover g5"><img src="assets/images/art/mira-vale.jpg" alt="Mira Vale cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Mira Vale</h3>
+  <p>Artist</p>
+</a>
+<a class="card round" href="artist.html">
+  <div class="cover g8"><img src="assets/images/art/kairo.jpg" alt="Kairo cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Kairo</h3>
+  <p>Artist</p>
+</a>
+<a class="card round" href="artist.html">
+  <div class="cover g2"><img src="assets/images/art/echo-harbor.jpg" alt="Echo Harbor cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Echo Harbor</h3>
+  <p>Artist</p>
+</a>
+<a class="card round" href="artist.html">
+  <div class="cover g4"><img src="assets/images/art/the-last-platform.jpg" alt="The Last Platform cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>The Last Platform</h3>
+  <p>Artist</p>
+</a>
+<a class="card round" href="artist.html">
+  <div class="cover g6"><img src="assets/images/art/aarav-sen.jpg" alt="Aarav Sen cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Aarav Sen</h3>
+  <p>Artist</p>
+</a>
+  </div>
+</section>
+        </div>
+      </main>
+    </div>
+<footer class="music-player" aria-label="Music player (visual only)">
+  <div class="now">
+    <img src="assets/images/card2img.jpeg" alt="Mahiye Jinna Sohna cover art">
+    <div class="now-text"><strong>Mahiye Jinna Sohna</strong><a href="artist.html">Darshan Raval</a></div>
+    <button class="ctl hide-sm" aria-label="Like"><i class="fa-regular fa-heart"></i></button>
+  </div>
+  <div class="controls">
+    <div class="control-btns">
+      <button class="ctl hide-sm" aria-label="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+      <button class="ctl hide-sm" aria-label="Previous"><i class="fa-solid fa-backward-step"></i></button>
+      <button class="play-pause" aria-label="Play"><i class="fa-solid fa-play"></i></button>
+      <button class="ctl" aria-label="Next"><i class="fa-solid fa-forward-step"></i></button>
+      <button class="ctl on hide-sm" aria-label="Repeat"><i class="fa-solid fa-repeat"></i></button>
+    </div>
+    <div class="progress"><span class="time">1:12</span><div class="bar" style="--w:38%"><span></span></div><span class="time">3:08</span></div>
+  </div>
+  <div class="extras">
+    <button class="ctl" aria-label="Queue"><i class="fa-solid fa-list"></i></button>
+    <button class="ctl" aria-label="Connect to a device"><i class="fa-solid fa-laptop"></i></button>
+    <div class="volume"><i class="fa-solid fa-volume-high ctl"></i><div class="bar" style="--w:70%"><span></span></div></div>
+  </div>
+</footer>
+<nav class="tabbar" aria-label="Mobile">
+  <a class="active" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+  <a class="" href="search.html"><i class="fa-solid fa-magnifying-glass"></i>Search</a>
+  <a class="" href="library.html"><i class="fa-solid fa-bookmark"></i>Your Library</a>
+</nav>
+  </body>
+</html>

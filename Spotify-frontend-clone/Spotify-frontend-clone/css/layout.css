@@ -1,0 +1,109 @@
+/* =====================================================
+   layout.css - the page "shell": sidebar, main panel, top bar
+   ===================================================== */
+
+/* .app is a 2-column CSS Grid: [sidebar | main].
+   Bottom padding reserves room for the fixed music player,
+   so the player never covers your content. */
+.app {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr); /* minmax(0,..) stops wide content causing horizontal scroll */
+  gap: 8px;
+  height: 100vh;
+  height: 100dvh;
+  padding: 8px 8px calc(var(--player-h) + var(--tab-h));
+}
+
+.panel { background: var(--panel); border-radius: var(--radius); }
+
+/* ---------- Sidebar ---------- */
+.sidebar { display: flex; flex-direction: column; gap: 8px; min-height: 0; }
+.nav { padding: 8px 12px; }
+.brand { padding: 8px 12px 4px; }
+.brand img { width: 32px; height: 32px; }
+
+.nav-link {
+  display: flex; align-items: center; gap: 16px;
+  padding: 10px 12px; border-radius: var(--radius-sm);
+  color: var(--muted); font-weight: 700;
+  transition: color var(--ease);
+}
+.nav-link i { width: 24px; text-align: center; font-size: 1.2rem; }
+.nav-link img { width: 24px; height: 24px; opacity: 0.7; transition: opacity var(--ease); }
+.nav-link:hover, .nav-link.active { color: var(--text); }   /* .active = current page */
+.nav-link:hover img, .nav-link.active img { opacity: 1; }
+
+.library { flex: 1; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
+.library-head { display: flex; justify-content: space-between; align-items: center; padding: 8px 12px 4px 4px; }
+.icons { display: flex; gap: 4px; }
+.icon-btn {
+  width: 32px; height: 32px; border-radius: 50%;
+  display: grid; place-items: center; color: var(--muted);
+  transition: background var(--ease), color var(--ease);
+}
+.icon-btn:hover { background: var(--card-hover); color: var(--text); }
+
+.library-list { flex: 1; overflow-y: auto; padding: 0 8px 8px; }
+.lib-item { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: var(--radius-sm); transition: background var(--ease); }
+.lib-item:hover { background: var(--card); }
+.lib-item .thumb { width: 48px; height: 48px; border-radius: 6px; flex: none; display: grid; place-items: center; overflow: hidden; }
+.lib-item .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.lib-item.artist .thumb { border-radius: 50%; }
+.lib-item strong { display: block; font-size: 0.9rem; }
+.lib-item small { color: var(--muted); font-size: 0.78rem; }
+
+/* Your original "empty state" boxes, kept and polished */
+.box { background: #232323; border-radius: var(--radius); padding: 16px; margin: 12px 4px 0; }
+.box-p1 { font-size: 1rem; font-weight: 600; }
+.box-p2 { font-size: 0.85rem; color: var(--muted); margin-top: 4px; }
+
+/* Your original pill button, now with hover + pointer */
+.badge {
+  background: #fff; color: #000; border-radius: 100px;
+  padding: 0 1rem; height: 2rem; font-weight: 700; font-size: 0.85rem;
+  margin-top: 0.75rem; width: fit-content;
+  transition: transform var(--ease), background var(--ease);
+}
+.badge:hover { transform: scale(1.04); background: #f0f0f0; }
+.dark-badge, .dark-badge:hover { background: #000; color: #fff; }
+.badge.dark-badge:hover { background: #1f1f1f; }
+.topbar .badge { margin-top: 0; }
+
+/* ---------- Main panel ---------- */
+.main-content {
+  min-width: 0; overflow-x: hidden; overflow-y: auto;
+  border-radius: var(--radius);
+  /* coloured glow at the top; "local" makes it scroll with the content */
+  background-color: var(--panel);
+  background-image: linear-gradient(180deg, var(--glow, #16382a) 0, var(--panel) 340px);
+  background-repeat: no-repeat;
+  background-size: 100% 340px;
+  background-attachment: local;
+}
+.page { padding: 0 24px 32px; }
+
+/* ---------- Sticky top bar (your original idea) ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 16px 24px;
+  background: rgba(18, 18, 18, 0.55); backdrop-filter: blur(14px);
+}
+.topbar-nav { display: flex; gap: 8px; }
+.nav-circle { width: 32px; height: 32px; border-radius: 50%; background: rgba(0, 0, 0, 0.65); display: grid; place-items: center; transition: background var(--ease); }
+.nav-circle:hover { background: #000; }
+.nav-circle img { width: 18px; height: 18px; }
+.topbar-actions { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: #2a2a2a; display: grid; place-items: center; transition: transform var(--ease); }
+.avatar:hover { transform: scale(1.08); }
+
+/* ---------- Sections ---------- */
+.section { margin-top: 28px; }
+.section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+h2 { font-size: 1.4rem; font-weight: 800; letter-spacing: -0.01em; }
+.show-all { color: var(--muted); font-weight: 700; font-size: 0.85rem; }
+.show-all:hover { text-decoration: underline; color: var(--text); }
+.page-title { font-size: clamp(1.6rem, 3vw, 2rem); font-weight: 800; margin-top: 8px; }
+
+/* Responsive grid: as many 160px+ columns as fit, no media query needed */
+.card-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }

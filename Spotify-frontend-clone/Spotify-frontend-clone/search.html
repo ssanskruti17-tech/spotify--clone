@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search | Spotify-Web Player: Music for everyone</title>
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- CSS order matters: later files can override earlier ones -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/player.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="app">
+<aside class="sidebar">
+  <nav class="nav panel" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Home"><img src="assets/images/logo.png" alt="Logo"></a>
+    <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i><span class="label">Home</span></a>
+    <a class="nav-link active" aria-current="page" href="search.html"><i class="fa-solid fa-magnifying-glass"></i><span class="label">Search</span></a>
+  </nav>
+  <section class="library panel">
+    <div class="library-head">
+      <a class="nav-link" href="library.html"><img src="assets/icons/library_icon.png" alt=""><span class="label">Your Library</span></a>
+      <div class="icons">
+        <button class="icon-btn" aria-label="Create playlist"><i class="fa-solid fa-plus"></i></button>
+        <a class="icon-btn" href="library.html" aria-label="Open your library"><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="library-list">
+
+      <div class="box">
+        <p class="box-p1">Create your first playlist</p>
+        <p class="box-p2">It's easy, we'll help you</p>
+        <button class="badge">Create playlist</button>
+      </div>
+      <div class="box">
+        <p class="box-p1">Let's find some podcasts to follow</p>
+        <p class="box-p2">We'll keep you updated on new episodes</p>
+        <button class="badge">Browse podcasts</button>
+      </div>
+    </div>
+  </section>
+</aside>
+      <main class="main-content" style="--glow:#2a2250">
+<header class="topbar">
+  <div class="topbar-nav">
+    <a class="nav-circle" href="index.html" aria-label="Back to Home"><img src="assets/icons/backward_icon.png" alt=""></a>
+    <a class="nav-circle hide-md" href="#" aria-label="Forward"><img src="assets/icons/forward_icon.png" alt=""></a>
+  </div>
+  <div class="search-box" role="search"><i class="fa-solid fa-magnifying-glass"></i><input type="search" placeholder="What do you want to play?" aria-label="Search"></div>
+  <div class="topbar-actions">
+    <button class="badge hide-sm">Explore Premium</button>
+    <button class="badge dark-badge hide-md"><i class="fa-solid fa-circle-down"></i> Install App</button>
+    <a class="avatar" href="#" aria-label="Profile"><i class="fa-regular fa-user"></i></a>
+  </div>
+</header>
+        <div class="page">
+<section class="section">
+  <h2 style="margin-bottom:16px">Browse all</h2>
+  <div class="category-grid">
+<a class="category g1" href="#">Pop<i class="fa-solid fa-microphone"></i></a>
+<a class="category g4" href="#">Hip-Hop<i class="fa-solid fa-headphones"></i></a>
+<a class="category g2" href="#">Bollywood<i class="fa-solid fa-film"></i></a>
+<a class="category g9" href="#">Classical<i class="fa-solid fa-music"></i></a>
+<a class="category g7" href="#">Rock<i class="fa-solid fa-guitar"></i></a>
+<a class="category g5" href="#">Indie<i class="fa-solid fa-leaf"></i></a>
+<a class="category g3" href="#">Podcasts<i class="fa-solid fa-podcast"></i></a>
+<a class="category g10" href="#">Workout<i class="fa-solid fa-dumbbell"></i></a>
+<a class="category g12" href="#">Chill<i class="fa-solid fa-couch"></i></a>
+<a class="category g6" href="#">Romance<i class="fa-solid fa-heart"></i></a>
+<a class="category g8" href="#">Party<i class="fa-solid fa-champagne-glasses"></i></a>
+<a class="category g11" href="#">Jazz<i class="fa-solid fa-saxophone"></i></a>
+  </div>
+</section>
+        </div>
+      </main>
+    </div>
+<footer class="music-player" aria-label="Music player (visual only)">
+  <div class="now">
+    <img src="assets/images/card2img.jpeg" alt="Mahiye Jinna Sohna cover art">
+    <div class="now-text"><strong>Mahiye Jinna Sohna</strong><a href="artist.html">Darshan Raval</a></div>
+    <button class="ctl hide-sm" aria-label="Like"><i class="fa-regular fa-heart"></i></button>
+  </div>
+  <div class="controls">
+    <div class="control-btns">
+      <button class="ctl hide-sm" aria-label="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+      <button class="ctl hide-sm" aria-label="Previous"><i class="fa-solid fa-backward-step"></i></button>
+      <button class="play-pause" aria-label="Play"><i class="fa-solid fa-play"></i></button>
+      <button class="ctl" aria-label="Next"><i class="fa-solid fa-forward-step"></i></button>
+      <button class="ctl on hide-sm" aria-label="Repeat"><i class="fa-solid fa-repeat"></i></button>
+    </div>
+    <div class="progress"><span class="time">1:12</span><div class="bar" style="--w:38%"><span></span></div><span class="time">3:08</span></div>
+  </div>
+  <div class="extras">
+    <button class="ctl" aria-label="Queue"><i class="fa-solid fa-list"></i></button>
+    <button class="ctl" aria-label="Connect to a device"><i class="fa-solid fa-laptop"></i></button>
+    <div class="volume"><i class="fa-solid fa-volume-high ctl"></i><div class="bar" style="--w:70%"><span></span></div></div>
+  </div>
+</footer>
+<nav class="tabbar" aria-label="Mobile">
+  <a class="" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+  <a class="active" href="search.html"><i class="fa-solid fa-magnifying-glass"></i>Search</a>
+  <a class="" href="library.html"><i class="fa-solid fa-bookmark"></i>Your Library</a>
+</nav>
+  </body>
+</html>

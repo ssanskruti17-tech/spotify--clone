@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Spotify-Web Player: Music for everyone</title>
+    <link rel="icon" href="assets/images/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <!-- CSS order matters: later files can override earlier ones -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/player.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <div class="app">
+<aside class="sidebar">
+  <nav class="nav panel" aria-label="Main">
+    <a class="brand" href="index.html" aria-label="Home"><img src="assets/images/logo.png" alt="Logo"></a>
+    <a class="nav-link active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i><span class="label">Home</span></a>
+    <a class="nav-link" href="search.html"><i class="fa-solid fa-magnifying-glass"></i><span class="label">Search</span></a>
+  </nav>
+  <section class="library panel">
+    <div class="library-head">
+      <a class="nav-link" href="library.html"><img src="assets/icons/library_icon.png" alt=""><span class="label">Your Library</span></a>
+      <div class="icons">
+        <button class="icon-btn" aria-label="Create playlist"><i class="fa-solid fa-plus"></i></button>
+        <a class="icon-btn" href="library.html" aria-label="Open your library"><i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="library-list">
+
+      <div class="box">
+        <p class="box-p1">Create your first playlist</p>
+        <p class="box-p2">It's easy, we'll help you</p>
+        <button class="badge">Create playlist</button>
+      </div>
+      <div class="box">
+        <p class="box-p1">Let's find some podcasts to follow</p>
+        <p class="box-p2">We'll keep you updated on new episodes</p>
+        <button class="badge">Browse podcasts</button>
+      </div>
+    </div>
+  </section>
+</aside>
+      <main class="main-content" style="--glow:#16382a">
+<header class="topbar">
+  <div class="topbar-nav">
+    <a class="nav-circle" href="index.html" aria-label="Back to Home"><img src="assets/icons/backward_icon.png" alt=""></a>
+    <a class="nav-circle hide-md" href="#" aria-label="Forward"><img src="assets/icons/forward_icon.png" alt=""></a>
+  </div>
+  
+  <div class="topbar-actions">
+    <button class="badge hide-sm">Explore Premium</button>
+    <button class="badge dark-badge hide-md"><i class="fa-solid fa-circle-down"></i> Install App</button>
+    <a class="avatar" href="#" aria-label="Profile"><i class="fa-regular fa-user"></i></a>
+  </div>
+</header>
+        <div class="page">
+<h1 class="page-title">Welcome back</h1>
+<section class="feature">
+  <img src="assets/images/art/hero.jpg" alt="Sunset over mountains">
+  <div class="feature-text">
+    <p>Featured playlist</p>
+    <h2>Late Night Drive</h2>
+    <p class="feature-desc">Synth, indie and slow beats for empty roads.</p>
+    <a class="btn-green" href="playlist.html"><i class="fa-solid fa-play"></i> Listen now</a>
+  </div>
+</section>
+<section class="cards section">
+  <div class="section-head"><h2>Recently Played</h2><a class="show-all" href="#">Show all</a></div>
+  <div class="card-container">
+<a class="card" href="playlist.html">
+  <div class="cover"><img src="assets/images/card1img.jpeg" alt="Top 50 - Global cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Top 50 - Global</h3>
+  <p>The most played songs right now</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover"><img src="assets/images/card2img.jpeg" alt="Mahiye Jinna Sohna cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Mahiye Jinna Sohna</h3>
+  <p>Darshan Raval</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover"><img src="assets/images/card3img.jpeg" alt="Mere Paas Tum Ho (Lofi Mix) cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Mere Paas Tum Ho (Lofi Mix)</h3>
+  <p>Silent Ocean</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover"><img src="assets/images/card4img.jpeg" alt="Naa Ready cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Naa Ready</h3>
+  <p>Anirudh Ravichander</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover"><img src="assets/images/card5img.jpeg" alt="Top Songs - Global cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Top Songs - Global</h3>
+  <p>Weekly music charts</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover"><img src="assets/images/card6img.jpeg" alt="Top Songs - India cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Top Songs - India</h3>
+  <p>Weekly music charts</p>
+</a>
+  </div>
+</section>
+<section class="cards section">
+  <div class="section-head"><h2>Trending Songs</h2><a class="show-all" href="#">Show all</a></div>
+  <div class="card-container">
+<a class="card" href="playlist.html">
+  <div class="cover"><img src="assets/images/card4img.jpeg" alt="Naa Ready cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Naa Ready</h3>
+  <p>Anirudh Ravichander</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g2"><img src="assets/images/art/neon-rooftops.jpg" alt="Neon Rooftops cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Neon Rooftops</h3>
+  <p>Nova Rain</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g8"><img src="assets/images/art/paper-planes-at-dawn.jpg" alt="Paper Planes at Dawn cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Paper Planes at Dawn</h3>
+  <p>Mira Vale</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g7"><img src="assets/images/art/slow-burn.jpg" alt="Slow Burn cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Slow Burn</h3>
+  <p>Kairo</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g12"><img src="assets/images/art/static-hearts.jpg" alt="Static Hearts cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Static Hearts</h3>
+  <p>Echo Harbor</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g9"><img src="assets/images/art/golden-hour-drive.jpg" alt="Golden Hour Drive cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Golden Hour Drive</h3>
+  <p>Aarav Sen</p>
+</a>
+  </div>
+</section>
+<section class="cards section">
+  <div class="section-head"><h2>Recommended Music</h2><a class="show-all" href="#">Show all</a></div>
+  <div class="card-container">
+<a class="card" href="playlist.html">
+  <div class="cover g3"><img src="assets/images/art/weekend-warmup.jpg" alt="Weekend Warmup cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Weekend Warmup</h3>
+  <p>Because you played Lofi</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g9"><img src="assets/images/art/acoustic-evenings.jpg" alt="Acoustic Evenings cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Acoustic Evenings</h3>
+  <p>Calm guitars and soft vocals</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g2"><img src="assets/images/art/road-trip-anthems.jpg" alt="Road Trip Anthems cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Road Trip Anthems</h3>
+  <p>Sing along on the highway</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g6"><img src="assets/images/art/sleep-sounds.jpg" alt="Sleep Sounds cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Sleep Sounds</h3>
+  <p>Wind down and drift off</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g10"><img src="assets/images/art/throwback-hits.jpg" alt="Throwback Hits cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Throwback Hits</h3>
+  <p>Songs you grew up with</p>
+</a>
+<a class="card" href="playlist.html">
+  <div class="cover g1"><img src="assets/images/art/study-beats.jpg" alt="Study Beats cover art"><span class="play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></span></div>
+  <h3>Study Beats</h3>
+  <p>Calm focus for long sessions</p>
+</a>
+  </div>
+</section>
+        </div>
+      </main>
+    </div>
+<footer class="music-player" aria-label="Music player (visual only)">
+  <div class="now">
+    <img src="assets/images/card2img.jpeg" alt="Mahiye Jinna Sohna cover art">
+    <div class="now-text"><strong>Mahiye Jinna Sohna</strong><a href="artist.html">Darshan Raval</a></div>
+    <button class="ctl hide-sm" aria-label="Like"><i class="fa-regular fa-heart"></i></button>
+  </div>
+  <div class="controls">
+    <div class="control-btns">
+      <button class="ctl hide-sm" aria-label="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+      <button class="ctl hide-sm" aria-label="Previous"><i class="fa-solid fa-backward-step"></i></button>
+      <button class="play-pause" aria-label="Play"><i class="fa-solid fa-play"></i></button>
+      <button class="ctl" aria-label="Next"><i class="fa-solid fa-forward-step"></i></button>
+      <button class="ctl on hide-sm" aria-label="Repeat"><i class="fa-solid fa-repeat"></i></button>
+    </div>
+    <div class="progress"><span class="time">1:12</span><div class="bar" style="--w:38%"><span></span></div><span class="time">3:08</span></div>
+  </div>
+  <div class="extras">
+    <button class="ctl" aria-label="Queue"><i class="fa-solid fa-list"></i></button>
+    <button class="ctl" aria-label="Connect to a device"><i class="fa-solid fa-laptop"></i></button>
+    <div class="volume"><i class="fa-solid fa-volume-high ctl"></i><div class="bar" style="--w:70%"><span></span></div></div>
+  </div>
+</footer>
+<nav class="tabbar" aria-label="Mobile">
+  <a class="active" href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+  <a class="" href="search.html"><i class="fa-solid fa-magnifying-glass"></i>Search</a>
+  <a class="" href="library.html"><i class="fa-solid fa-bookmark"></i>Your Library</a>
+</nav>
+  </body>
+</html>

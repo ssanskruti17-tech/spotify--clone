@@ -1,0 +1,48 @@
+/* =====================================================
+   player.css - fixed bottom music player (VISUAL ONLY)
+   HTML + CSS cannot play audio. That needs JavaScript.
+   ===================================================== */
+.music-player {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  height: var(--player-h);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center; gap: 16px; padding: 0 16px;
+  background: #000;
+}
+
+/* left: what is playing */
+.now { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.now img { width: 56px; height: 56px; border-radius: 6px; object-fit: cover; flex: none; }
+.now-text { min-width: 0; }
+.now-text strong { display: block; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.now-text a { font-size: 0.75rem; color: var(--muted); }
+.now-text a:hover { color: #fff; text-decoration: underline; }
+
+/* centre: buttons + progress */
+.controls { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; }
+.control-btns { display: flex; align-items: center; gap: 20px; }
+.ctl { color: var(--muted); font-size: 1rem; transition: color var(--ease), transform var(--ease); }
+.ctl:hover { color: #fff; transform: scale(1.12); }
+.ctl.on { color: var(--green); }
+.play-pause { width: 36px; height: 36px; border-radius: 50%; background: #fff; color: #000; display: grid; place-items: center; transition: transform var(--ease); }
+.play-pause:hover { transform: scale(1.08); }
+
+.progress { display: flex; align-items: center; gap: 8px; width: 100%; max-width: 560px; font-size: 0.7rem; color: var(--muted); }
+
+/* progress / volume bar. Width of the fill comes from --w (set inline in HTML) */
+.bar { position: relative; flex: 1; height: 4px; border-radius: 2px; background: #4d4d4d; cursor: pointer; }
+.bar::after { content: ""; position: absolute; inset: -8px 0; }       /* bigger invisible click area */
+.bar span { position: relative; display: block; height: 100%; width: var(--w, 40%); border-radius: 2px; background: #fff; transition: background var(--ease); }
+.bar span::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: #fff; opacity: 0; transition: opacity var(--ease); }
+.bar:hover span { background: var(--green); }                            /* turns green on hover, like Spotify */
+.bar:hover span::after { opacity: 1; }
+
+/* right: queue, devices, volume */
+.extras { display: flex; justify-content: flex-end; align-items: center; gap: 16px; }
+.volume { display: flex; align-items: center; gap: 8px; width: 120px; }
+
+/* Mobile tab bar (hidden on desktop, enabled in responsive.css) */
+.tabbar { display: none; position: fixed; left: 0; right: 0; bottom: 0; height: var(--tab-h); z-index: 60; background: #000; grid-template-columns: repeat(3, 1fr); }
+.tabbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 0.7rem; font-weight: 600; color: var(--muted); }
+.tabbar a i { font-size: 1.25rem; }
+.tabbar a.active { color: #fff; }

@@ -1,0 +1,53 @@
+/* =====================================================
+   responsive.css - loaded LAST so it can override other files
+   Desktop >1100px | Tablet 701-1100px | Mobile <=700px
+   ===================================================== */
+
+/* Small laptops / tablets: hide the least important table column */
+@media (max-width: 1000px) {
+  .hide-md { display: none !important; }
+  .col-album { display: none; }
+  .volume { display: none; }
+}
+
+/* ---------- Tablet: sidebar shrinks to an icon rail ---------- */
+@media (max-width: 1100px) {
+  .app { grid-template-columns: 72px minmax(0, 1fr); }
+  .label, .icons, .box, .lib-item div:last-child { display: none; }
+  .brand { display: grid; place-items: center; padding: 12px 0 4px; }
+  .nav { padding: 8px 4px; }
+  .nav-link { justify-content: center; padding: 12px 0; }
+  .library-head { justify-content: center; padding: 4px 0; }
+  .lib-item { justify-content: center; padding: 6px 0; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 700px) {
+  :root { --player-h: 64px; --tab-h: 56px; }
+  .app { grid-template-columns: 1fr; gap: 0; padding: 0 0 calc(var(--player-h) + var(--tab-h) + 8px); }
+  .sidebar { display: none; }              /* replaced by the bottom tab bar */
+  .tabbar { display: grid; }
+  .main-content { border-radius: 0; }
+  .hide-sm { display: none !important; }
+  .topbar { padding: 12px 16px; flex-wrap: wrap; }
+  .search-box { order: 3; flex-basis: 100%; max-width: none; }   /* search drops to its own row */
+  .page { padding: 0 16px 24px; }
+  .banner { margin: -64px -16px 0; padding: 100px 16px 20px; }
+  .card { padding: 12px; }
+  .card-container { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  .category-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .category { font-size: 1.1rem; }
+  .hero { flex-direction: column; align-items: flex-start; }
+
+  /* song table: show artist under the title instead of its own column */
+  .col-artist { display: none; }
+  .track-title small { display: block; }
+  .tracks td, .tracks th { padding: 8px 6px; }
+
+  /* compact floating player: cover + title + play/next, thin progress line */
+  .music-player { left: 8px; right: 8px; bottom: calc(var(--tab-h) + 4px); grid-template-columns: minmax(0, 1fr) auto; padding: 0 12px; border-radius: 10px; background: #1f1f1f; }
+  .now img { width: 44px; height: 44px; }
+  .extras, .control-btns .hide-sm, .progress .time { display: none; }
+  .control-btns { gap: 16px; }
+  .progress { position: absolute; left: 10px; right: 10px; bottom: 3px; width: auto; max-width: none; }
+}
